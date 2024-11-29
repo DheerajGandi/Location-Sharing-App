@@ -8,8 +8,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 class Wrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final user = Provider.of<User?>(context);
+    final user = Provider.of<User?>(context); // Access the user stream
 
+    //
     if (user == null) {
       return SignInPage();
     } else {
